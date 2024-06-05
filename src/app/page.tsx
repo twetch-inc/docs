@@ -5,8 +5,8 @@ import { Button } from '@/components/ui/button'
 
 export default function Home() {
 	return (
-		<main className="flex flex-col gap-4 w-full relative max-w-full w-[600px] container py-14">
-			<div className="flex flex-col justify-center items-center gap-2">
+		<main className="flex justify-center gap-4 w-full relative  container py-14">
+			<div className="flex flex-col justify-center items-center gap-2 max-w-full w-[600px]">
 				<h1 className="font-bold text-2xl md:text-3xl text-center whitespace-nowrap">
 					It’s time to say goodbye.
 				</h1>
