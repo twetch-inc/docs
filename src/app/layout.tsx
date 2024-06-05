@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 		url: 'https://twetch.com',
 		images: [
 			{
-				url: 'https://twetch.org/unfurl.png'
+				url: 'https://twetch.com/unfurl.png'
 			}
 		]
 	}
