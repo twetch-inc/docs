@@ -17,7 +17,7 @@ import useSWR from 'swr'
 
 export default function Accounts() {
 	const [open, setOpen] = React.useState(false)
-	const [data, setData] = React.useState(null)
+	const [data, setData] = React.useState<any>(null)
 
 	const handleSelect = React.useCallback(async (id) => {
 		setSelected(id)
@@ -25,7 +25,7 @@ export default function Accounts() {
 		const { ExtendedPrivateKey, PublicKey } = await import('@/utils/sdk.wasm')
 		const account = accounts.find((e) => e.id === id)
 
-		const xpriv = ExtendedPrivateKey.from_mnemonic(Buffer.from(account.seed, 'utf8'), null)
+		const xpriv = ExtendedPrivateKey.from_mnemonic(Buffer.from(account.seed, 'utf8'))
 		const derived = xpriv.derive_from_path('m/0/0')
 
 		setData({
@@ -42,6 +42,7 @@ export default function Accounts() {
 		}
 
 		try {
+			// @ts-ignore
 			const d = JSON.parse(localStorage.getItem('accounts'))
 
 			return d

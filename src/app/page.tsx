@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from '@/components/ui/button'
-import Accounts from './accounts'
+import Accounts from '@/components/accounts'
 
 export default function Home() {
 	return (
