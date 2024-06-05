@@ -56,7 +56,7 @@ export default function Accounts() {
 
 	const selectedAccount = React.useMemo(() => {
 		const a = accounts.find((e) => e.id === selected)
-		if (!data) {
+		if (!data && a) {
 			handleSelect(a.id)
 		}
 		return a
