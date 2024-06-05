@@ -52,14 +52,16 @@ export default function Accounts() {
 		return []
 	}, [data, handleSelect])
 
-	const [selected, setSelected] = React.useState(accounts[0]?.id)
+	const [selected, setSelected] = React.useState(accounts?.[0]?.id)
 
 	const selectedAccount = React.useMemo(() => {
-		const a = accounts.find((e) => e.id === selected)
-		if (!data && a) {
-			handleSelect(a.id)
+		if (accounts) {
+			const a = accounts.find((e) => e.id === selected)
+			if (!data && a) {
+				handleSelect(a.id)
+			}
+			return a
 		}
-		return a
 	}, [selected, accounts, data])
 
 	const renderAccount = React.useCallback((account) => {
