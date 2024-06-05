@@ -7,15 +7,15 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-	title: 'Yours',
-	description: 'Yours',
+	title: 'Twetch',
+	description: 'Twetch',
 	openGraph: {
-		title: 'Yours',
-		description: 'Yours',
-		url: 'https://yours.org',
+		title: 'Twetch',
+		description: 'Twetch',
+		url: 'https://twetch.com',
 		images: [
 			{
-				url: 'https://yours.org/unfurl.png'
+				url: 'https://twetch.org/unfurl.png'
 			}
 		]
 	}
