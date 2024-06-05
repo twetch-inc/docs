@@ -1,7 +1,6 @@
-'use client'
-
 import React from 'react'
 import { Button } from '@/components/ui/button'
+import Accounts from './accounts'
 
 export default function Home() {
 	return (
@@ -21,6 +20,9 @@ export default function Home() {
 						Yours wallet extension.
 					</a>
 				</p>
+				<div className="mt-4">
+					<Accounts />
+				</div>
 			</div>
 		</main>
 	)
