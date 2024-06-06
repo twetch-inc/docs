@@ -1,6 +1,6 @@
 export default {
 	logo: <span>Twetch Documentation</span>,
 	project: {
-		link: 'https://github.com/shuding/nextra'
+		link: 'https://github.com/twetch-inc/docs'
 	}
 }
