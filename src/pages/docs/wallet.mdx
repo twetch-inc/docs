@@ -1,0 +1,34 @@
+import Accounts from '@/components/accounts'
+
+# Wallet Recovery
+
+Yours wallet will be the new home for all your on-chain assets. Please back up your Twetch account seed phrase and import it to the [Yours wallet extension](https://yours.org).
+
+## Derivation Paths
+
+There are three derivation paths used on Twetch wallets, `Account`, `Twonk V1` and `Wallet`.
+
+### Account
+
+This private key is used to sign twetch data, to hold v2 twonks and is the primary wallet address keypair. This is the address you would see when looking at your receive address.
+
+```text filename="Account Derivation"
+m/0/0
+```
+
+### Twonk V1
+
+This private key is used to hold v1 twonks
+
+```text filename="Twonk V1 Derivation"
+m/0/1
+```
+
+### Wallet
+
+This is a rolling address derivation. If you're bsv balance is not showing up in yours wallet, it is because the funds are in these rolling addresses. You can try using electrum or simply cash to recover these funds.
+
+```text filename="Wallet Derivation"
+m/44'/0'/0'/0
+```
+<Accounts />
